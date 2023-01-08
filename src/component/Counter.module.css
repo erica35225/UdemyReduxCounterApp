@@ -1,0 +1,31 @@
+.container{
+    color: blue;
+    text-align: center;
+    margin-left: 22rem;
+    margin-right: 22rem;
+    margin-top: 5rem;
+    margin-left: rem;
+    height: 50vh;
+    width: 50vw;
+    border: solid;
+    padding-top: 2rem;
+    border-radius: 2rem;
+    background: blueviolet;
+}
+.button_increment{
+    background-color: palevioletred;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 2rem;
+    
+}
+.button_decrement{
+    background-color: palevioletred;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    
+}
