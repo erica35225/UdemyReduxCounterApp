@@ -1,3 +1,4 @@
+import { number } from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../component/Counter.module.css";
 
@@ -15,6 +16,9 @@ export const Counter = () => {
   function toggleCounterHandler() {
     dispatch({ type: "ToggleCounter" });
   }
+  function IncreaseBy5Handler() {
+    dispatch({ type: "IncreaseBy5", payload: 5 });
+  }
 
   //console.log(counter);
   return (
@@ -22,7 +26,7 @@ export const Counter = () => {
       <button className={styles.button_increment} onClick={incrementHandler}>
         Increment
       </button>
-      { showCounter  && <div>{counter}</div>}
+      {showCounter && <div>{counter}</div>}
       <button className={styles.button_decrement} onClick={decrementHandler}>
         Decrement
       </button>
@@ -31,6 +35,9 @@ export const Counter = () => {
         onClick={toggleCounterHandler}
       >
         ToggleCounter
+      </button>
+      <button className={styles.button_increment} onClick={IncreaseBy5Handler}>
+        IncreaseBy 5
       </button>
     </div>
   );
