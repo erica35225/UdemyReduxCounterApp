@@ -1,6 +1,6 @@
-import { number } from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../component/Counter.module.css";
+import { CounterActions } from "../store";
 
 export const Counter = () => {
   const dispatch = useDispatch();
@@ -8,16 +8,18 @@ export const Counter = () => {
   const showCounter = useSelector((state) => state.counterValue.showCounter);
 
   function incrementHandler() {
-    dispatch({ type: "Increment" });
+    dispatch(CounterActions.Increment());
   }
   function decrementHandler() {
-    dispatch({ type: "Decrement" });
+    dispatch(CounterActions.Decrement());
   }
   function toggleCounterHandler() {
-    dispatch({ type: "ToggleCounter" });
+    dispatch(CounterActions.ToggleCounter());
   }
   function IncreaseBy5Handler() {
-    dispatch({ type: "IncreaseBy5", payload: 5 });
+    dispatch(CounterActions.IncreaseBy5(5));
+     // redux toolkit will generate an action with type and payload automatically
+     // {type: SOME_UNIQUE_IDENTIFIER, payload: 5}
   }
 
   //console.log(counter);
